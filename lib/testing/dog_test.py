@@ -46,7 +46,7 @@ class TestDog:
         '''prints "Breed must be in list of approved breeds." if not in breed list.'''
         captured_out = io.StringIO()
         sys.stdout = captured_out
-        Dog(breed="Human")
+        Dog(breed="Human", name="Fido")
         sys.stdout = sys.__stdout__
         assert(captured_out.getvalue() == "Breed must be in list of approved breeds.\n")
 
